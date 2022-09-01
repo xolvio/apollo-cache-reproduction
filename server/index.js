@@ -3,6 +3,7 @@ const id = require('uuid');
 
 const books = [];
 
+// const numberOfBooksToGenerate = 1500
 const numberOfBooksToGenerate = 150000
 
 for (let index = 0; index < numberOfBooksToGenerate; index++) {

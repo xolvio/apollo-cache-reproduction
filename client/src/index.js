@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
+import {ApolloClient, ApolloProvider} from '@apollo/client';
+import {Hermes} from 'apollo-cache-hermes'
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
@@ -18,7 +19,7 @@ const defaultOptions = {
 
 const client = new ApolloClient({
     uri: 'http://localhost:4000/',
-    cache: new InMemoryCache(),
+    cache: new Hermes({}),
     // defaultOptions: defaultOptions,
 });
 
